@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    image: workshop_app
+  nginx:
+    image: workshop_nginx
+    ports:
+      - 81:80
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
